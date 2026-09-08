@@ -1,0 +1,74 @@
+:root {
+  --bg: #05070c;
+  --ink: #e8f4ff;
+  --cyan: #38f0d8;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  overscroll-behavior: none;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#app,
+#game-root {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#game-root canvas {
+  display: block;
+  touch-action: none;
+}
+
+#boot-splash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: radial-gradient(120% 80% at 50% 40%, #0d1320 0%, #05070c 70%);
+  z-index: 10;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+#boot-splash.hidden {
+  opacity: 0;
+}
+
+.boot-mark {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  color: var(--cyan);
+  text-shadow: 0 0 26px rgba(56, 240, 216, 0.45);
+}
+
+.boot-sub {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(232, 244, 255, 0.4);
+}
