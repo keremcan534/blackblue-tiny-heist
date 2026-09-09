@@ -2,6 +2,12 @@
 
 **Freeze time. Change the route. Steal it. Escape.**
 
+[![Deploy](https://github.com/keremcan534/blackblue-tiny-heist/actions/workflows/deploy.yml/badge.svg)](https://github.com/keremcan534/blackblue-tiny-heist/actions/workflows/deploy.yml)
+
+### ▶ Play it: **https://keremcan534.github.io/blackblue-tiny-heist/**
+
+Open it on a phone in portrait. Progress saves to that device.
+
 A mobile-first, top-down miniature stealth puzzle game. The thief walks on her own —
 you never steer her directly. Instead you **hold the screen to stop time**, tap a
 reachable tile to preview the route, and **release to send her**. Thirty hand-designed
@@ -12,7 +18,7 @@ every sprite, sound and light pool is generated at runtime.
 
 ---
 
-## Play
+## Play locally
 
 ```bash
 npm install
@@ -112,6 +118,9 @@ Par times in `src/game/levels/tuning.ts` are generated from the proven optimal r
 
 Current state: **30/30 levels proven solvable with a fully undetected route**,
 optimal runs from 5.5s to 24.5s (median 9.8s).
+
+CI runs the same proof on every push (`.github/workflows/deploy.yml`), so a level
+that stops being beatable fails the build instead of shipping.
 
 ## Determinism
 
